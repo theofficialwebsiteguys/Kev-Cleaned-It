@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './social-bar.component.html',
-  styleUrl: './social-bar.component.css'
+  styleUrl: './social-bar.component.scss'
 })
 export class SocialBarComponent {
 

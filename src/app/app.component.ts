@@ -15,7 +15,7 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'HitchCock HardScapes';

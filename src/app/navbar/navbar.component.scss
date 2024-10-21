@@ -1,0 +1,37 @@
+.navbar {
+    position: absolute; /* Ensures the navbar sits on top of the hero section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent !important; /* Removes the background */
+    z-index: 10; /* Ensures the navbar is above the hero section */
+    padding: 3rem; /* Padding to space out the navbar items */
+  }
+  
+  .nav-link {
+    color: #fff !important; /* White text for the links */
+    font-size: 1rem; /* Adjust font size */
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-link:hover {
+    color: #ff0000 !important; /* Red hover color */
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7); /* Adds a subtle glow effect */
+  }
+  
+  .text-danger {
+    color: #ff0000 !important; /* Red color for phone number */
+    font-weight: bold;
+  }
+  
+  .nav-item .text-danger:hover {
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.9); /* Adds a glow effect to the phone number */
+  }
+  
+  
+  @media (max-width: 991px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  }
+  

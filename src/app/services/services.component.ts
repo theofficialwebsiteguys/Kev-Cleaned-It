@@ -6,7 +6,7 @@ import { FeaturesComponent } from '../features/features.component';
   standalone: true,
   imports: [FeaturesComponent],
   templateUrl: './services.component.html',
-  styleUrl: './services.component.css'
+  styleUrl: './services.component.scss'
 })
 export class ServicesComponent {
 

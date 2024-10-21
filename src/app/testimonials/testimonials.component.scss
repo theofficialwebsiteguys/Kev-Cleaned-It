@@ -1,0 +1,78 @@
+#background {
+    width: 100%;
+    background-color: #000; /* Changed to solid black */
+    padding: 50px 0;
+}
+
+.trans-background {
+    background-color: rgba(44, 46, 44, 0.8);
+    padding: 50px 25px;
+}
+
+h1#heading {
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+}
+.card {
+    background-color: #222; /* Darker background for the card */
+    border: none;
+    color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    margin: auto;
+    display: flex; /* Flexbox to align the content */
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is spaced out evenly */
+    height: 100%; /* Take full height */
+    min-height: 275px; /* Set a minimum consistent height for all cards */
+}
+
+.card .user-content {
+    flex-grow: 1; /* Ensures that content can expand */
+}
+
+.col-md-4 {
+    max-width: 33.33%; /* Ensure 3 cards per row */
+}
+
+.carousel-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .col-md-4 {
+        max-width: 100%; /* Make cards full width on mobile */
+    }
+}
+
+
+.user-image {
+    margin-bottom: 15px; /* Spacing below image */
+}
+
+.user-content {
+    margin-bottom: 15px;
+}
+
+.ratings i {
+    color: #ffc107; /* Star rating color */
+}
+
+@media only screen and (max-width: 600px) {
+    h1#heading {
+        font-size: 1.5em;
+    }
+    .col-md-4 {
+        width: 100%;
+    }
+    #background {
+        padding: 30px 0;
+    }
+}
+

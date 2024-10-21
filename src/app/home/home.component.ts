@@ -3,6 +3,10 @@ import { FeaturesComponent } from '../features/features.component';
 
 import { ContactComponent } from '../contact/contact.component';
 import { TestimonialsComponent } from '../testimonials/testimonials.component';
+import { ServicesComponent } from '../services/services.component';
+import { AboutComponent } from '../about/about.component';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { HeroComponent } from '../hero/hero.component';
 
 
 
@@ -12,10 +16,14 @@ import { TestimonialsComponent } from '../testimonials/testimonials.component';
   imports: [
     ContactComponent,
     TestimonialsComponent,
-    FeaturesComponent
+    FeaturesComponent,
+    ServicesComponent,
+    AboutComponent,
+    NavbarComponent,
+    HeroComponent
   ],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.scss'
 })
 export class HomeComponent {
 

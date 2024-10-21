@@ -1,15 +1,19 @@
+import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 
 
 @Component({
   selector: 'app-features',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './features.component.html',
-  styleUrl: './features.component.css'
+  styleUrl: './features.component.scss'
 })
 export class FeaturesComponent implements OnInit {
+  sliderValue: number = 50; // Default slider value set to 50%
+
   ngOnInit() {
     const container1 = document.querySelector('.container') as HTMLElement;
     console.log(container1)
@@ -37,4 +41,5 @@ export class FeaturesComponent implements OnInit {
       container3.style.setProperty('--position', `${target.value}%`);
     });
   }
+  
 }
