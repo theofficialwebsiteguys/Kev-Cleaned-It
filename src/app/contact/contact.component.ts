@@ -19,9 +19,10 @@ export class ContactComponent {
 
   ngOnInit() {
     this.contactForm = this.fb.group({
-      name: ['', Validators.required],
+      name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', Validators.required]
+      phone: ['', [Validators.required]],
+      proposal: ['', [Validators.required]] // added proposal field here
     });
   }
 
@@ -32,6 +33,7 @@ export class ContactComponent {
     formData.append('name', this.contactForm.get('name')?.value);
     formData.append('email', this.contactForm.get('email')?.value);
     formData.append('phone', this.contactForm.get('phone')?.value);
+    formData.append('proposal', this.contactForm.get('proposal')?.value);
 
 
     // this.firebaseService.sendEmail(formData).subscribe(

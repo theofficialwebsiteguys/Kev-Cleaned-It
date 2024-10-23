@@ -7,6 +7,7 @@ import { ServicesComponent } from '../services/services.component';
 import { AboutComponent } from '../about/about.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { HeroComponent } from '../hero/hero.component';
+import { GalleryComponent } from '../gallery/gallery.component';
 
 
 
@@ -20,7 +21,8 @@ import { HeroComponent } from '../hero/hero.component';
     ServicesComponent,
     AboutComponent,
     NavbarComponent,
-    HeroComponent
+    HeroComponent,
+    GalleryComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
