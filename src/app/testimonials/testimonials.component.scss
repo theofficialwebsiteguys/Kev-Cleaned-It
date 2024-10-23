@@ -39,15 +39,29 @@ h1#heading {
     max-width: 33.33%; /* Ensure 3 cards per row */
 }
 
+.carousel{
+    min-height: 600px;
+}
+
 .carousel-inner {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+@media only screen and (max-width: 1024px) {
+    .carousel{
+        min-height: 1000px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .col-md-4 {
         max-width: 100%; /* Make cards full width on mobile */
+    }
+
+    .carousel{
+        min-height: 1300px;
     }
 }
 
