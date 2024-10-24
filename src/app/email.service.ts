@@ -10,7 +10,7 @@ export class EmailService {
   submitForm(formData: any) {
     const payload = {
       ...formData,
-      recipientEmail: 'theofficialwebsiteguys@gmail.com', // Pass the specific recipient email
+      businessEmail: 'theofficialwebsiteguys@gmail.com', // Pass the specific recipient email
     };
     return this.http.post(' https://twg-template-submission-92b1532f00c1.herokuapp.com/send-email-universal', payload);
   }
