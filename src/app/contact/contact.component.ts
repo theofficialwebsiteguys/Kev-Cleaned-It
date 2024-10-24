@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { EmailService } from '../email.service';
 
 @Component({
   selector: 'app-contact',
@@ -15,7 +16,7 @@ export class ContactComponent {
 
   successMessage: string = ''; // Variable to hold the success message
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private emailService: EmailService) {}
 
   ngOnInit() {
     this.contactForm = this.fb.group({
@@ -29,24 +30,17 @@ export class ContactComponent {
   sendEmail() {
     this.submitted = true; // Set to true to show the spinner and disable the button
 
-    const formData = new FormData();
-    formData.append('name', this.contactForm.get('name')?.value);
-    formData.append('email', this.contactForm.get('email')?.value);
-    formData.append('phone', this.contactForm.get('phone')?.value);
-    formData.append('proposal', this.contactForm.get('proposal')?.value);
+    const formData = this.contactForm.value;
 
-
-    // this.firebaseService.sendEmail(formData).subscribe(
-    //     response => {
-    //         console.log('Email sent successfully!', response);
-    //         this.successMessage = 'Your website template request has been submitted successfully!';
-    //         this.submitted = false; // Reset the submitted flag
-    //     },
-    //     error => {
-    //         console.error('Error sending email:', error);
-    //         this.submitted = false; // Reset the submitted flag even if there's an error
-    //     }
-    // );
-}
+    this.emailService.submitForm(formData)
+      .subscribe(response => {
+        console.log('Form submitted successfully!', response);
+        this.successMessage = 'Your website template request has been submitted successfully!';
+        this.submitted = false; // Reset the submitted flag
+      }, error => {
+        console.error('Error submitting form', error);
+        this.submitted = false; // Reset the submitted flag
+      });
+  }
   
 }
