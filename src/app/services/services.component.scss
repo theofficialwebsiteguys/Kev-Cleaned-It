@@ -1,7 +1,7 @@
 /* hero.component.css */
 .hero-container {
   position: relative;
-  background-image: url('../../assets/default.jpg');
+  background-image: url('/assets/default.jpg');
   background-size: cover;
   background-position: center;
   height: 200px;
@@ -62,7 +62,7 @@ h1 {
   width: 100%; /* Make width responsive */
   height: 0; /* Set height to 0 */
   padding-top: 100%; /* Padding top as a percentage of the width to maintain aspect ratio */
-  background-image: url('../../assets/default.jpg');
+  background-image: url('/assets/default.jpg');
   background-size: cover; /* Cover ensures the background image covers the entire content area */
   background-position: center; /* Center the image within the element */
   background-repeat: no-repeat; /* Prevent the image from repeating */

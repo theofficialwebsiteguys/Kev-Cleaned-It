@@ -1,7 +1,7 @@
 @if (users) {
     <div id="background">
         <div class="trans-background">
-            <h1 id="heading">Here's what our satisfied clients are saying...</h1>
+            <h1 id="heading" class="oswald-font">Here's what our satisfied clients are saying...</h1>
             <ngb-carousel [interval]="4000" pauseOnHover="false" [showNavigationArrows]="false">
                 <ng-template ngbSlide *ngFor="let group of chunkedUsers">
                     <div class="container mt-5 mb-5">
@@ -12,7 +12,7 @@
                                         <img [src]="user.image" class="rounded-circle" height="50" width="50">
                                     </div>
                                     <div class="user-content">
-                                        <h5 class="mb-0">{{ user.name }}</h5>
+                                        <h5 class="mb-0 oswald-font">{{ user.name }}</h5>
                                         <p>{{ user.description }}</p>
                                     </div>
                                     <div class="ratings">
